@@ -1,0 +1,25 @@
+{
+  "name": "phoneperfect",
+  "version": "1.0.2",
+  "description": "PhonePerfect - Smart Smartphone Recommendation, Comparison & Live Price Tracker",
+  "main": "app.js",
+  "scripts": {
+    "start": "npx serve -l 3000 .",
+    "dev": "npx serve -l 3000 .",
+    "server": "python price_server.py",
+    "sync-android": "python sync_phoneperfect_assets.py"
+  },
+  "keywords": [
+    "smartphone",
+    "recommendation",
+    "pwa",
+    "android",
+    "webview",
+    "price-tracker"
+  ],
+  "author": "Nishar29",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}

@@ -1,0 +1,40 @@
+# Python & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Database
+*.db
+*.sqlite3
+
+# Node & Frontend
+node_modules/
+dist/
+.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Testing & Logs
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# Environment & Credentials
+.env
+.env.local
+.env.production
+release-key.jks
+*.keystore
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,351 @@
+  0: [P     ] (Normal      ) DOCSPHERE AI – A SECURE ON-DEVICE DOCUMENT INTELLI
+  1: [P     ] (Normal      ) A PROJECT REPORT
+  2: [P     ] (Normal      ) Submitted by
+  3: [P     ] (Normal      ) [STUDENT NAME 1]  –  [REGISTER NUMBER]
+  4: [P     ] (Normal      ) [STUDENT NAME 2]  –  [REGISTER NUMBER]
+  5: [P     ] (Normal      ) [STUDENT NAME 3]  –  [REGISTER NUMBER]
+  6: [P     ] (Normal      ) [STUDENT NAME 4]  –  [REGISTER NUMBER]
+  7: [P     ] (Normal      ) in partial fulfilment for the award of the degree 
+  8: [P     ] (Normal      ) [BACHELOR OF ENGINEERING / BACHELOR OF TECHNOLOGY]
+  9: [P     ] (Normal      ) in
+ 10: [P     ] (Normal      ) COMPUTER SCIENCE AND ENGINEERING
+ 11: [P     ] (Normal      ) [NAME OF THE INSTITUTION]
+ 12: [P     ] (Normal      ) [Place of the Institution]
+ 13: [P     ] (Normal      ) [Affiliating University]
+ 14: [P     ] (Normal      ) [MONTH YEAR]
+ 15: [P     ] (Normal      ) 
+ 16: [P     ] (Heading 1   ) BONAFIDE CERTIFICATE
+ 17: [P     ] (Normal      ) Certified that this project report titled “DocSphe
+ 18: [TBL   ] (1x2         ) 
+[SIGNATURE]
+[NAME OF SUPERVISOR]
+SUPERVISOR
+Depar
+ 19: [P     ] (Normal      ) 
+ 20: [P     ] (Normal      ) Submitted for the project viva-voce examination he
+ 21: [TBL   ] (1x2         ) 
+INTERNAL EXAMINER
+ 22: [P     ] (Heading 1   ) ACKNOWLEDGEMENT
+ 23: [P     ] (Normal      ) We express our sincere gratitude to the management
+ 24: [P     ] (Normal      ) We are thankful to [NAME OF THE HEAD OF THE DEPART
+ 25: [P     ] (Normal      ) We owe a special debt of gratitude to our supervis
+ 26: [P     ] (Normal      ) Finally, we thank our families and friends for the
+ 27: [P     ] (Heading 1   ) ABSTRACT
+ 28: [P     ] (Normal      ) Modern mobile users handle an extensive collection
+ 29: [P     ] (Normal      ) The system is developed in modern Kotlin with Jetp
+ 30: [P     ] (Normal      ) To ensure seamless execution on resource-constrain
+ 31: [P     ] (Normal      ) Keywords: On-device intelligence, small language m
+ 32: [P     ] (Heading 1   ) TABLE OF CONTENTS
+ 33: [P     ] (Normal      ) PAGE NO.
+ 34: [P     ] (Normal      ) 1  INTRODUCTION	1
+ 35: [P     ] (Normal      ) 1.1 DESCRIPTION	1
+ 36: [P     ] (Normal      ) 1.2 DOMAIN SPECIFICATION	2
+ 37: [P     ] (Normal      ) 1.2.1 Mobile Edge Computing and On-Device Intellig
+ 38: [P     ] (Normal      ) 1.2.2 Small Language Models (SLMs) and MediaPipe I
+ 39: [P     ] (Normal      ) 1.2.3 On-Device Retrieval-Augmented Generation and
+ 40: [P     ] (Normal      ) 1.3 PROBLEM STATEMENT	3
+ 41: [P     ] (Normal      ) 1.4 OBJECTIVES AND SCOPE	3
+ 42: [P     ] (Normal      ) 1.4.1 Objectives	3
+ 43: [P     ] (Normal      ) 1.4.2 Scope of the Project	4
+ 44: [P     ] (Normal      ) 1.4.3 Applications	4
+ 45: [P     ] (Normal      ) 1.5 ORGANISATION OF THE REPORT	5
+ 46: [P     ] (Normal      ) 2  LITERATURE SURVEY	6
+ 47: [P     ] (Normal      ) 2.1 OVERVIEW	6
+ 48: [P     ] (Normal      ) 2.2 REVIEW OF RELATED WORK	6
+ 49: [P     ] (Normal      ) 2.3 SUMMARY OF FINDINGS AND RESEARCH GAP	8
+ 50: [P     ] (Normal      ) 3  EXISTING SYSTEM	10
+ 51: [P     ] (Normal      ) 3.1 CLOUD-DEPENDENT DOCUMENT ASSISTANTS	10
+ 52: [P     ] (Normal      ) 3.2 TRADITIONAL RULE-BASED AND KEYWORD FILE EXPLOR
+ 53: [P     ] (Normal      ) 3.3 HEAVY UNOPTIMIZED ON-DEVICE REASONING ENGINES	
+ 54: [P     ] (Normal      ) 4  PROBLEMS IDENTIFIED	11
+ 55: [P     ] (Normal      ) 4.1 PRIVACY RISKS AND PII LEAKAGE IN CLOUD SYSTEMS
+ 56: [P     ] (Normal      ) 4.2 HIGH LATENCY AND COMPLETE OFFLINE UNAVAILABILI
+ 57: [P     ] (Normal      ) 4.3 MOBILE OUT-OF-MEMORY (OOM) AND SYSTEM FREEZES	
+ 58: [P     ] (Normal      ) 4.4 POOR RECOGNITION ACROSS SCANNED DOCUMENTS AND 
+ 59: [P     ] (Normal      ) 4.5 PROMPT TOKEN BUDGET OVERFLOW IN MOBILE SLMS	12
+ 60: [P     ] (Normal      ) 4.6 CONCURRENCY CONFLICTS AND SQLITE LOCK CONTENTI
+ 61: [P     ] (Normal      ) 4.7 HALLUCINATION OF SENSITIVE STRUCTURED VALUES	1
+ 62: [P     ] (Normal      ) 5  PROPOSED SYSTEM	13
+ 63: [P     ] (Normal      ) 5.1 OVERVIEW	13
+ 64: [P     ] (Normal      ) 5.2 SYSTEM ARCHITECTURE	13
+ 65: [P     ] (Normal      ) 5.3 WORKFLOW OF THE PROPOSED SYSTEM	14
+ 66: [P     ] (Normal      ) 5.4 KEY FEATURES	15
+ 67: [P     ] (Normal      ) 5.5 COMPARISON OF EXISTING AND PROPOSED SYSTEMS	16
+ 68: [P     ] (Normal      ) 5.6 DEPLOYMENT ARCHITECTURE	17
+ 69: [P     ] (Normal      ) 6  SYSTEM REQUIREMENTS	18
+ 70: [P     ] (Normal      ) 6.1 HARDWARE REQUIREMENTS	18
+ 71: [P     ] (Normal      ) 6.2 SOFTWARE REQUIREMENTS	18
+ 72: [P     ] (Normal      ) 7  SYSTEM IMPLEMENTATIONS	20
+ 73: [P     ] (Normal      ) 7.1 LIST OF MODULES	20
+ 74: [P     ] (Normal      ) 7.2 MODULES DESCRIPTION	20
+ 75: [P     ] (Normal      ) 7.2.1 Document Storage Ingestion and Multi-Format 
+ 76: [P     ] (Normal      ) 7.2.2 Multi-Resolution Vision OCR and Text Preproc
+ 77: [P     ] (Normal      ) 7.2.3 Deterministic Field Extraction and PII Sanit
+ 78: [P     ] (Normal      ) 7.2.4 Room SQLite FTS4 Indexing and Hybrid BM25 Re
+ 79: [P     ] (Normal      ) 7.2.5 Adaptive Dual-Engine Routing and Inference C
+ 80: [P     ] (Normal      ) 7.2.6 Interactive Multimodal Chat and Encrypted Cl
+ 81: [P     ] (Normal      ) 8  CONCLUSION AND FUTURE ENHANCEMENTS	30
+ 82: [P     ] (Normal      ) 8.1 CONCLUSION	30
+ 83: [P     ] (Normal      ) 8.2 FUTURE ENHANCEMENTS	30
+ 84: [P     ] (Normal      ) REFERENCES	32
+ 85: [P     ] (Heading 1   ) LIST OF FIGURES
+ 86: [P     ] (Normal      ) PAGE NO.
+ 87: [P     ] (Normal      ) Figure 5.1 Overall System Architecture of DocSpher
+ 88: [P     ] (Normal      ) Figure 5.2 End-to-End Processing Workflow of the D
+ 89: [P     ] (Normal      ) Figure 7.1 Home Screen and Document Dashboard of D
+ 90: [P     ] (Normal      ) Figure 7.2 Multi-Resolution Document Scanner and O
+ 91: [P     ] (Normal      ) Figure 7.3 Structured Field Extraction and Entity 
+ 92: [P     ] (Normal      ) Figure 7.4 Adaptive Dual-Engine Routing and AI Mod
+ 93: [P     ] (Normal      ) Figure 7.5 Interactive Document Q&A and Grounded C
+ 94: [P     ] (Normal      ) Figure 7.6 Encrypted Google Drive Synchronization 
+ 95: [P     ] (Normal      ) Figure 7.7 Settings and On-Device Model Management
+ 96: [P     ] (Heading 1   ) LIST OF TABLES
+ 97: [P     ] (Normal      ) PAGE NO.
+ 98: [P     ] (Normal      ) Table 2.1 Summary of the Literature Survey (2025 t
+ 99: [P     ] (Normal      ) Table 5.1 Comparison of Existing and Proposed Syst
+100: [P     ] (Normal      ) Table 6.1 Hardware Requirements	18
+101: [P     ] (Normal      ) Table 6.2 Software Requirements	18
+102: [P     ] (Normal      ) Table 7.1 Core Architectural Components and Interf
+103: [P     ] (Normal      ) Table 7.2 Document Retrieval Signals and Ranking W
+104: [P     ] (Normal      ) Table 7.3 Dual-Engine Adaptive Routing Paths and P
+105: [P     ] (Normal      ) Table 7.4 Prompt Budget Allocation and Dynamic Tru
+106: [P     ] (Normal      ) Table 7.5 System Security and Privacy Protection S
+107: [P     ] (Heading 1   ) LIST OF ABBREVIATIONS
+108: [TBL   ] (16x2        ) Abbreviation
+109: [P     ] (Normal      ) 
+110: [P     ] (Heading 1   ) CHAPTER 1
+INTRODUCTION
+111: [P     ] (Heading 2   ) 1.1 DESCRIPTION
+112: [P     ] (Normal      ) In the modern digital era, individuals and profess
+113: [P     ] (Normal      ) DocSphere AI is an intelligent, privacy-first mobi
+114: [P     ] (Normal      ) The foundational principle of DocSphere AI is that
+115: [P     ] (Heading 2   ) 1.2 DOMAIN SPECIFICATION
+116: [P     ] (Normal      ) The project operates at the confluence of three vi
+117: [P     ] (Heading 3   ) 1.2.1 Mobile Edge Computing and On-Device Intellig
+118: [P     ] (Normal      ) Mobile edge computing shifts intensive computation
+119: [P     ] (Heading 3   ) 1.2.2 Small Language Models (SLMs) and MediaPipe I
+120: [P     ] (Normal      ) Small Language Models (SLMs) represent compact neu
+121: [P     ] (Normal      ) While SLMs exhibit remarkable reasoning capabiliti
+122: [P     ] (Heading 3   ) 1.2.3 On-Device Retrieval-Augmented Generation and
+123: [P     ] (Normal      ) Retrieval-Augmented Generation (RAG) grounds the g
+124: [P     ] (Heading 2   ) 1.3 PROBLEM STATEMENT
+125: [P     ] (Normal      ) Mobile document storage is overwhelmingly unstruct
+126: [P     ] (Normal      ) Furthermore, cloud-dependent assistants suffer fro
+127: [P     ] (Heading 2   ) 1.4 OBJECTIVES AND SCOPE
+128: [P     ] (Heading 3   ) 1.4.1 Objectives
+129: [P     ] (Normal      ) The core objectives of the DocSphere AI project ar
+130: [P     ] (List Paragraph) To design and implement a native Android applicati
+131: [P     ] (List Paragraph) To integrate an on-device Optical Character Recogn
+132: [P     ] (List Paragraph) To develop a deterministic field extraction engine
+133: [P     ] (List Paragraph) To implement an on-device text chunking and indexi
+134: [P     ] (List Paragraph) To deploy an on-device Small Language Model (Gemma
+135: [P     ] (List Paragraph) To implement an adaptive Dual-Engine AI Routing ar
+136: [P     ] (List Paragraph) To provide secure cloud synchronization and encryp
+137: [P     ] (Heading 3   ) 1.4.2 Scope of the Project
+138: [P     ] (Normal      ) The scope of DocSphere AI encompasses personal and
+139: [P     ] (Normal      ) The on-device Small Language Model is specifically
+140: [P     ] (Heading 3   ) 1.4.3 Applications
+141: [P     ] (Normal      ) The proposed DocSphere AI system addresses crucial
+142: [P     ] (List Paragraph) Personal Identity & Financial Management: Safely s
+143: [P     ] (List Paragraph) Healthcare & Medical Records: Managing diagnostic 
+144: [P     ] (List Paragraph) Academic & Research Study: Assisting university st
+145: [P     ] (List Paragraph) Legal & Corporate Field Work: Enabling attorneys, 
+146: [P     ] (List Paragraph) Enterprise Compliance & Data Sovereignty: Providin
+147: [P     ] (Heading 2   ) 1.5 ORGANISATION OF THE REPORT
+148: [P     ] (Normal      ) The remainder of this report is organized into sev
+149: [P     ] (Heading 1   ) CHAPTER 2
+LITERATURE SURVEY
+150: [P     ] (Heading 2   ) 2.1 OVERVIEW
+151: [P     ] (Normal      ) The technological underpinnings of DocSphere AI dr
+152: [P     ] (Heading 2   ) 2.2 REVIEW OF RELATED WORK
+153: [P     ] (Normal      ) Table 2.1 summarizes ten prominent research public
+154: [P     ] (Normal      ) Table 2.1 Summary of the Literature Survey (2025 t
+155: [TBL   ] (11x4        ) S.No
+156: [P     ] (Normal      ) 
+157: [P     ] (Heading 2   ) 2.3 SUMMARY OF FINDINGS AND RESEARCH GAP
+158: [P     ] (Normal      ) A critical evaluation of the existing literature r
+159: [P     ] (Normal      ) Although quantized Small Language Models like Gemm
+160: [P     ] (List Paragraph) Most mobile RAG implementations attempt to run hig
+161: [P     ] (List Paragraph) Neural language models frequently hallucinate or a
+162: [P     ] (List Paragraph) Current commercial applications do not provide tra
+163: [P     ] (List Paragraph) DocSphere AI bridges these critical gaps by combin
+164: [P     ] (Normal      ) 
+165: [P     ] (Heading 1   ) CHAPTER 3
+EXISTING SYSTEM
+166: [P     ] (Normal      ) Currently, users seeking to manage, search, and un
+167: [P     ] (Heading 2   ) 3.1 CLOUD-DEPENDENT DOCUMENT ASSISTANTS
+168: [P     ] (Normal      ) The predominant class of mobile document tools rel
+169: [P     ] (Heading 2   ) 3.2 TRADITIONAL RULE-BASED AND KEYWORD FILE EXPLOR
+170: [P     ] (Normal      ) The second conventional approach consists of stand
+171: [P     ] (Heading 2   ) 3.3 HEAVY UNOPTIMIZED ON-DEVICE REASONING ENGINES
+172: [P     ] (Normal      ) A recent emerging category comprises experimental 
+173: [P     ] (Heading 1   ) CHAPTER 4
+PROBLEMS IDENTIFIED
+174: [P     ] (Normal      ) A comprehensive investigation of existing systems 
+175: [P     ] (Heading 2   ) 4.1 PRIVACY RISKS AND PII LEAKAGE IN CLOUD SYSTEMS
+176: [P     ] (Normal      ) Uploading personal documents to cloud servers crea
+177: [P     ] (Heading 2   ) 4.2 HIGH LATENCY AND COMPLETE OFFLINE UNAVAILABILI
+178: [P     ] (Normal      ) Cloud-based document analysis introduces unavoidab
+179: [P     ] (Heading 2   ) 4.3 MOBILE OUT-OF-MEMORY (OOM) AND SYSTEM FREEZES
+180: [P     ] (Normal      ) Android smartphones enforce strict per-process mem
+181: [P     ] (Heading 2   ) 4.4 POOR RECOGNITION ACROSS SCANNED DOCUMENTS AND 
+182: [P     ] (Normal      ) Millions of real-world documents are captured as p
+183: [P     ] (Heading 2   ) 4.5 PROMPT TOKEN BUDGET OVERFLOW IN MOBILE SLMS
+184: [P     ] (Normal      ) Mobile Small Language Models like Gemma 2B INT4 po
+185: [P     ] (Heading 2   ) 4.6 CONCURRENCY CONFLICTS AND SQLITE LOCK CONTENTI
+186: [P     ] (Normal      ) Executing database queries, full-text FTS searches
+187: [P     ] (Heading 2   ) 4.7 HALLUCINATION OF SENSITIVE STRUCTURED VALUES
+188: [P     ] (Normal      ) Neural language models are probabilistic text gene
+189: [P     ] (Heading 1   ) CHAPTER 5
+PROPOSED SYSTEM
+190: [P     ] (Heading 2   ) 5.1 OVERVIEW
+191: [P     ] (Normal      ) DocSphere AI is proposed as an autonomous, privacy
+192: [P     ] (Heading 2   ) 5.2 SYSTEM ARCHITECTURE
+193: [P     ] (Normal      ) The architecture of DocSphere AI is structured int
+194: [TBL   ] (1x1         ) [ SPACE RESERVED FOR FIGURE ]
+Insert the overall s
+195: [P     ] (Normal      ) Figure 5.1 Overall System Architecture of DocSpher
+196: [P     ] (Normal      ) The architectural layers fulfill the following dis
+197: [P     ] (List Paragraph) Presentation Layer: Built with modern Jetpack Comp
+198: [P     ] (List Paragraph) Data Ingestion & Extraction Layer: Orchestrated by
+199: [P     ] (List Paragraph) Intelligence & Reasoning Layer: Comprises the AiRo
+200: [P     ] (List Paragraph) Local Storage & Indexing Layer: Built on Android R
+201: [P     ] (List Paragraph) External Cloud Sync Layer: Provides secure, encryp
+202: [P     ] (Heading 2   ) 5.3 WORKFLOW OF THE PROPOSED SYSTEM
+203: [P     ] (Normal      ) The end-to-end processing workflow of DocSphere AI
+204: [P     ] (List Paragraph) Storage Ingestion: The LocalStorageScanner identif
+205: [P     ] (List Paragraph) Multi-Resolution OCR Preprocessing: For photograph
+206: [P     ] (List Paragraph) Deterministic Field Extraction: Text is analyzed b
+207: [P     ] (List Paragraph) Chunking and FTS4 Indexing: DocumentChunkingWorker
+208: [P     ] (List Paragraph) User Query Submission: The user inputs a natural l
+209: [P     ] (List Paragraph) Dual-Engine Routing Decision: The AiRouter evaluat
+210: [P     ] (List Paragraph) Prompt Token Budget Enforcement: For on-device inf
+211: [P     ] (List Paragraph) Serialized Inference & Response: The InferenceCoor
+212: [TBL   ] (1x1         ) [ SPACE RESERVED FOR FIGURE ]
+Insert the end-to-en
+213: [P     ] (Normal      ) Encrypted Backup: If enabled, DriveRepository sync
+214: [P     ] (Heading 2   ) Figure 5.2 End-to-End Processing Workflow of the D
+215: [P     ] (List Paragraph) 5.4 KEY FEATURES
+216: [P     ] (List Paragraph) 100% On-Device Privacy: Core document OCR, determi
+217: [P     ] (List Paragraph) Multi-Resolution Vision OCR: Preprocessing automat
+218: [P     ] (List Paragraph) Deterministic Entity Extraction: Extracts critical
+219: [P     ] (List Paragraph) Room SQLite FTS4 & BM25 Search: Sub-millisecond fu
+220: [P     ] (List Paragraph) Strict Prompt Token Budgeting: Enforces a rigid 45
+221: [P     ] (List Paragraph) Concurrency Coordination & Mutex Serialization: Se
+222: [P     ] (List Paragraph) Adaptive Dual-Engine Routing: Intelligently naviga
+223: [P     ] (Heading 2   ) 5.5 COMPARISON OF EXISTING AND PROPOSED SYSTEMS
+224: [P     ] (Normal      ) Table 5.1 compares the proposed DocSphere AI syste
+225: [P     ] (Normal      ) Table 5.1 Comparison of Existing and Proposed Syst
+226: [TBL   ] (9x4         ) Feature
+227: [P     ] (Normal      ) 
+228: [P     ] (Heading 2   ) 5.6 DEPLOYMENT ARCHITECTURE
+229: [P     ] (Normal      ) DocSphere AI is deployed as a native Android appli
+230: [P     ] (Heading 1   ) CHAPTER 6
+SYSTEM REQUIREMENTS
+231: [P     ] (Normal      ) To support seamless on-device neural inference alo
+232: [P     ] (Heading 2   ) 6.1 HARDWARE REQUIREMENTS
+233: [P     ] (Normal      ) Table 6.1 Hardware Requirements
+234: [TBL   ] (7x2         ) Component
+235: [P     ] (Normal      ) 
+236: [P     ] (Heading 2   ) 6.2 SOFTWARE REQUIREMENTS
+237: [P     ] (Normal      ) Table 6.2 Software Requirements
+238: [TBL   ] (16x2        ) Component
+239: [P     ] (Normal      ) 
+240: [P     ] (Heading 1   ) CHAPTER 7
+SYSTEM IMPLEMENTATIONS
+241: [P     ] (Normal      ) This chapter details the technical implementation 
+242: [P     ] (Heading 2   ) 7.1 LIST OF MODULES
+243: [P     ] (Normal      ) The system is divided into the following six inter
+244: [P     ] (List Paragraph) Document Storage Ingestion and Multi-Format Scanni
+245: [P     ] (List Paragraph) Multi-Resolution Vision OCR and Text Preprocessing
+246: [P     ] (List Paragraph) Deterministic Field Extraction and PII Sanitizatio
+247: [P     ] (List Paragraph) Room SQLite FTS4 Indexing and Hybrid BM25 Retrieva
+248: [P     ] (List Paragraph) Adaptive Dual-Engine Routing and Inference Coordin
+249: [P     ] (List Paragraph) Interactive Multimodal Chat and Encrypted Cloud Ba
+250: [P     ] (Heading 2   ) 7.2 MODULES DESCRIPTION
+251: [P     ] (Heading 3   ) 7.2.1 Document Storage Ingestion and Multi-Format 
+252: [P     ] (Normal      ) The Document Storage Ingestion and Multi-Format Sc
+253: [P     ] (Normal      ) Digital documents that contain embedded text strea
+254: [P     ] (Normal      ) Background tasks are scheduled through IndexingWor
+255: [P     ] (Normal      ) Table 7.1 Core Architectural Components and Interf
+256: [TBL   ] (8x3         ) Component Group
+257: [P     ] (Normal      ) 
+258: [TBL   ] (1x1         ) [ SPACE RESERVED FOR FIGURE ]
+Insert the Home Scre
+259: [P     ] (Normal      ) Figure 7.1 Home Screen and Document Dashboard of D
+260: [P     ] (Heading 3   ) 7.2.2 Multi-Resolution Vision OCR and Text Preproc
+261: [P     ] (Normal      ) Scanned receipts, photographed identity cards, and
+262: [P     ] (Normal      ) When processing large camera images (often exceedi
+263: [P     ] (Normal      ) Once downscaled, the bitmap is supplied to OcrInde
+264: [TBL   ] (1x1         ) [ SPACE RESERVED FOR FIGURE ]
+Insert the Multi-Res
+265: [P     ] (Normal      ) Figure 7.2 Multi-Resolution Document Scanner and O
+266: [P     ] (Heading 3   ) 7.2.3 Deterministic Field Extraction and PII Sanit
+267: [P     ] (Normal      ) Critical documents contain sensitive, regulated id
+268: [P     ] (Normal      ) To eliminate hallucination entirely, DocSphere AI 
+269: [P     ] (Normal      ) Table 7.2 Document Retrieval Signals and Ranking W
+270: [TBL   ] (8x3         ) Retrieval Signal
+271: [P     ] (Normal      ) 
+272: [TBL   ] (1x1         ) [ SPACE RESERVED FOR FIGURE ]
+Insert the Structure
+273: [P     ] (Normal      ) Figure 7.3 Structured Field Extraction and Entity 
+274: [P     ] (Heading 3   ) 7.2.4 Room SQLite FTS4 Indexing and Hybrid BM25 Re
+275: [P     ] (Normal      ) To deliver instantaneous contextual retrieval with
+276: [P     ] (Normal      ) Table 7.3 Dual-Engine Adaptive Routing Paths and P
+277: [TBL   ] (5x4         ) Routing Mode
+278: [P     ] (Normal      ) 
+279: [P     ] (Normal      ) Each chunk is indexed in the ChunkFtsEntity virtua
+280: [P     ] (Normal      ) In parallel, the SensitiveDataScrubber provides cl
+281: [TBL   ] (1x1         ) [ SPACE RESERVED FOR FIGURE ]
+Insert the Adaptive 
+282: [P     ] (Normal      ) Figure 7.4 Adaptive Dual-Engine Routing and AI Mod
+283: [P     ] (Heading 3   ) 7.2.5 Adaptive Dual-Engine Routing and Inference C
+284: [P     ] (Normal      ) The Adaptive Dual-Engine Routing and Inference Coo
+285: [P     ] (Normal      ) For on-device inference, running Gemma 2B INT4 on 
+286: [P     ] (Normal      ) Total Prompt Budget = Prompt_system + Metadata_doc
+287: [P     ] (Normal      ) and the text chunks are dynamically truncated from
+288: [P     ] (Normal      ) Table 7.4 Prompt Budget Allocation and Dynamic Tru
+289: [TBL   ] (8x3         ) Budget Component
+290: [P     ] (Normal      ) 
+291: [P     ] (Normal      ) Furthermore, to prevent concurrent inference calls
+292: [P     ] (Normal      ) Table 7.5 System Security and Privacy Protection S
+293: [TBL   ] (5x3         ) Security State
+294: [P     ] (Normal      ) 
+295: [TBL   ] (1x1         ) [ SPACE RESERVED FOR FIGURE ]
+Insert the Interacti
+296: [P     ] (Normal      ) Figure 7.5 Interactive Document Q&A and Grounded C
+297: [P     ] (Heading 3   ) 7.2.6 Interactive Multimodal Chat and Encrypted Cl
+298: [P     ] (Normal      ) The Interactive Multimodal Chat and Encrypted Clou
+299: [P     ] (Normal      ) Users can navigate through source citations, inspe
+300: [P     ] (Normal      ) To ensure data durability without sacrificing priv
+301: [P     ] (Normal      ) The application code base follows clean architectu
+302: [TBL   ] (1x1         ) [ SPACE RESERVED FOR FIGURE ]
+Insert the Encrypted
+303: [P     ] (Normal      ) Figure 7.6 Encrypted Google Drive Synchronization 
+304: [TBL   ] (1x1         ) [ SPACE RESERVED FOR FIGURE ]
+Insert the Settings 
+305: [P     ] (Normal      ) Figure 7.7 Settings and On-Device Model Management
+306: [P     ] (Heading 1   ) CHAPTER 8
+CONCLUSION AND FUTURE ENHANCEMENTS
+307: [P     ] (Heading 2   ) 8.1 CONCLUSION
+308: [P     ] (Normal      ) This project presented DocSphere AI, an intelligen
+309: [P     ] (Normal      ) By integrating Google ML Kit with a 2048px multi-r
+310: [P     ] (Heading 2   ) 8.2 FUTURE ENHANCEMENTS
+311: [P     ] (List Paragraph) Train lightweight on-device vector embedding model
+312: [P     ] (List Paragraph) Expand multi-modal on-device reasoning to support 
+313: [P     ] (List Paragraph) Integrate cross-platform synchronization with end-
+314: [P     ] (List Paragraph) Incorporate on-device biometric document signing a
+315: [P     ] (List Paragraph) Add fine-tuned specialized domain adapters (LoRA w
+316: [P     ] (List Paragraph) Extend multilingual OCR and multilingual Small Lan
+317: [P     ] (Heading 1   ) REFERENCES
+318: [P     ] (List Paragraph) Team, G et al. 2024, ‘Gemma: Open models based on 
+319: [P     ] (List Paragraph) Xu, D, Lin, S & Zhang, Y 2024, ‘EdgeLLM: Enabling 
+320: [P     ] (List Paragraph) Lewis, P et al. 2020, ‘Retrieval-augmented generat
+321: [P     ] (List Paragraph) Huang, Y et al. 2022, ‘LayoutLMv3: Pre-training fo
+322: [P     ] (List Paragraph) Robertson, S & Zaragoza, H 2009, ‘The probabilisti
+323: [P     ] (List Paragraph) Nech, A et al. 2023, ‘ML Kit: Fast and accurate on
+324: [P     ] (List Paragraph) Al-Rubaie, A & Chang, JM 2021, ‘Privacy-preserving
+325: [P     ] (List Paragraph) Dettmers, T, Pagnoni, A, Holtzman, A & Zettlemoyer
+326: [P     ] (List Paragraph) Yao, S et al. 2023, ‘ReAct: Synergizing reasoning 
+327: [P     ] (List Paragraph) Shen, Z, Zhang, X & Lu, K 2022, ‘Full-text search 
+328: [SECTPR] (            ) 

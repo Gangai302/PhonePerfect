@@ -1,0 +1,146 @@
+=== TABLE 0 (1 rows, 2 cols) ===
+Row 0:  [SIGNATURE] [NAME OF SUPERVISOR] SUPERVISOR Department of Computer Science and Engineering [Institution Name] |  [SIGNATURE] [NAME OF THE HEAD OF THE DEPARTMENT] HEAD OF THE DEPARTMENT Department of Computer Science and Engineering [Institution Name]
+
+=== TABLE 1 (1 rows, 2 cols) ===
+Row 0:  INTERNAL EXAMINER |  EXTERNAL EXAMINER
+
+=== TABLE 2 (16 rows, 2 cols) ===
+Row 0: Abbreviation | Expansion
+Row 1: AI | Artificial Intelligence
+Row 2: API | Application Programming Interface
+Row 3: BM25 | Best Matching 25 (Probabilistic Information Retrieval)
+Row 4: CPU | Central Processing Unit
+Row 5: DAO | Data Access Object
+Row 6: FTS | Full-Text Search (SQLite FTS4 Extension)
+Row 7: GPU | Graphics Processing Unit
+Row 8: INT4 | 4-bit Integer Weight Quantization
+Row 9: JSON | JavaScript Object Notation
+Row 10: LLM | Large Language Model
+Row 11: NPU | Neural Processing Unit
+Row 12: OCR | Optical Character Recognition
+Row 13: OOM | Out Of Memory
+Row 14: PII | Personally Identifiable Information
+Row 15: RAG | Retrieval-Augmented Generation
+
+=== TABLE 3 (11 rows, 4 cols) ===
+Row 0: S.No | Author(s) and Year | Title and Source | Brief Summary
+Row 1: 1 | Team et al. (2024) | Gemma: Open Models Based on Gemini Research. Google DeepMind Report | Introduces Gemma 2B and 7B open models, demonstrating state-of-the-art language reasoning in compact parameter sizes. Proves that 4-bit quantized Gemma 2B fits in mobile memory.
+Row 2: 2 | Xu, Lin and Zhang (2024) | EdgeLLM: Enabling On-Device LLM Inference. IEEE Micro 2024 | Proposes runtime optimization techniques for mobile SLMs, demonstrating that token-budgeted prompt construction and memory serialization prevent mobile GPU/NPU out-of-memory crashes.
+Row 3: 3 | Lewis et al. (2020) | Retrieval-Augmented Generation for NLP Tasks. NeurIPS 2020 | Formalizes the RAG framework, establishing that grounding language model generation with retrieved parametric passages significantly reduces hallucination and improves factual accuracy.
+Row 4: 4 | Huang et al. (2022) | LayoutLMv3: Multimodal Document Pre-training. ACM MM 2022 | Investigates multi-modal document representations combining text, layout coordinates, and visual features. Proves that structured key-value extraction benefits from layout-aware OCR bounding boxes.
+Row 5: 5 | Robertson & Zaragoza (2009 / 2021) | The Probabilistic Relevance Framework: BM25 and Beyond. FnTIR | Analyzes the Okapi BM25 ranking algorithm, demonstrating its superior token-overlap accuracy and lightweight execution compared to heavy vector embeddings on resource-constrained embedded systems.
+Row 6: 6 | Nech et al. (2023) | ML Kit: Fast On-Device Machine Learning. Google Research Publication | Explores on-device vision pipelines including Text Recognition (OCR) and Object Detection, emphasizing multi-resolution image preprocessing and memory management under Android hardware constraints.
+Row 7: 7 | Al-Rubaie & Chang (2021) | Privacy-Preserving Machine Learning. IEEE Security & Privacy | Surveys privacy risks in cloud-based machine learning systems, concluding that client-side data scrubbing and edge execution provide the highest guarantees against unauthorized data reconstruction.
+Row 8: 8 | Dettmers et al. (2023) | QLoRA: Efficient Finetuning of Quantized LLMs. NeurIPS 2023 | Demonstrates that 4-bit NormalFloat and INT4 quantization retain virtually all model reasoning capacity while reducing memory footprint by over 70%, making 2B models practical for mobile devices.
+Row 9: 9 | Yao et al. (2023) | ReAct: Synergizing Reasoning and Acting in LLMs. ICLR 2023 | Explores the interplay between verbal reasoning traces and deterministic action execution, inspiring hybrid pipelines where regex filters extract exact numbers and language models synthesize explanations.
+Row 10: 10 | Shen, Zhang and Lu (2022) | Full-Text Search in Embedded SQLite Databases. JSA 2022 | Analyzes the performance of SQLite FTS4 and FTS5 modules on mobile flash storage, demonstrating sub-10ms query response times across hundreds of indexed document chunks.
+
+=== TABLE 4 (1 rows, 1 cols) ===
+Row 0: [ SPACE RESERVED FOR FIGURE ] Insert the overall system architecture diagram here: Android Jetpack Compose UI, WorkManager Ingestion & OCR Scaler, Google ML Kit, Room SQLite FTS4 Database, SensitiveDataScrubber, Dual-Engine AiRouter, MediaPipe GenAI (Gemma 2B INT4), and Google Drive OAuth 2.0 PKCE Sync Insert the architecture diagram here: Flutter app, FastAPI routers and services, ChromaDB, PostgreSQL, Redis, Firestore, GitHub API and Gemini API
+
+=== TABLE 5 (1 rows, 1 cols) ===
+Row 0: [ SPACE RESERVED FOR FIGURE ] Insert the end-to-end processing workflow diagram here: Storage Scanner -> 2048px Preprocessing -> ML Kit OCR -> Regex Entity Extraction -> FTS4 Chunk Indexing -> User Chat Query -> Dual-Engine Router -> Prompt Budget Truncation -> Mutex-Serialized Gemma 2B Inference -> Citations Rendered Insert the workflow or flow-chart diagram here
+
+=== TABLE 6 (9 rows, 4 cols) ===
+Row 0: Feature | Manual File Management | Cloud Document Assistants | DocSphere AI
+Row 1: Data Privacy & PII Security | High (Manual files only) | Low (Full cloud upload) | Absolute (Zero-cloud offline + PII scrubber)
+Row 2: Offline Functionality | Yes (Basic browsing only) | No (Completely blocked) | Yes (100% offline OCR, search & Gemma 2B)
+Row 3: OCR Text Extraction | None (Filenames only) | Cloud-based OCR | On-device ML Kit with 2048px scaling
+Row 4: Search Intelligence | Filename matching only | Cloud semantic search | Room SQLite FTS4 + BM25 ranking
+Row 5: Structured Field Extraction | None | Cloud LLM (Hallucination risk) | Deterministic regex (Zero hallucination)
+Row 6: Inference Stability | Not applicable | Stable (Remote cloud clusters) | 100% crash-free (Prompt budget & Mutex)
+Row 7: Prompt Budgeting | Not applicable | Unlimited (High cost / latency) | Enforced ~450 tokens (~1800 chars)
+Row 8: Threading & Concurrency | Basic UI thread | Network asynchronous | Kotlin Coroutines Dispatchers.IO + Mutex
+
+=== TABLE 7 (7 rows, 2 cols) ===
+Row 0: Component | Specification
+Row 1: Mobile Processor | Octa-core 64-bit ARMv8/ARMv9 (Qualcomm Snapdragon 7/8 series, MediaTek Dimensity, or equivalent)
+Row 2: Mobile RAM | 6 GB minimum (8 GB or higher recommended for concurrent Gemma 2B inference)
+Row 3: Mobile Storage | 4 GB or more free internal flash storage (for Gemma 2B model weights and SQLite FTS4 database)
+Row 4: Target Mobile Device | Android smartphone running Android 10 (API 29) to Android 15 (API 35) with USB debugging enabled
+Row 5: Development Processor | Intel Core i7 / AMD Ryzen 7 (8 cores / 16 threads or higher)
+Row 6: Development RAM & Storage | 16 GB RAM minimum; 100 GB free SSD storage for Android Studio, SDKs, and Gradle caches
+
+=== TABLE 8 (16 rows, 2 cols) ===
+Row 0: Component | Specification
+Row 1: Operating System | Android 10 to Android 15 (Target Mobile) / Windows 11, macOS, Linux (Development)
+Row 2: Programming Language | Kotlin 2.0.21 with Java 17 LTS
+Row 3: Mobile Framework & SDK | Android Jetpack SDK with Android Gradle Plugin (AGP) 8.7+
+Row 4: UI Toolkit | Jetpack Compose with Material 3 (Material You) and Compose Navigation
+Row 5: On-Device Language Model | Google Gemma 2B (INT4 Quantized, .bin / .task format)
+Row 6: On-Device Inference Runtime | Google MediaPipe GenAI Task SDK for Android (v0.10.14+)
+Row 7: Vision & OCR Engine | Google ML Kit Text Recognition for Android (v16.0.0+)
+Row 8: Database & Full-Text Search | Android Room Persistence Library (v2.6.1) with SQLite FTS4 and BM25 matchinfo
+Row 9: Background Task Scheduling | AndroidX WorkManager (v2.9.1) with CoroutineWorker
+Row 10: Concurrency & Coroutines | Kotlin Coroutines (v1.9.0) with Dispatchers.IO, Dispatchers.Default, and Mutex
+Row 11: Dependency Injection | Dagger Hilt (v2.51.1) for modular dependency management
+Row 12: Cloud AI Engine (Optional) | Google Gemini 1.5 Flash / Pro via Google GenAI REST API
+Row 13: Cloud Storage & Sync | Google Drive REST API v3 with Google Sign-In and OAuth 2.0 PKCE
+Row 14: Network & Serialization | OkHttp 4.12, Retrofit 2.11, and Kotlinx Serialization JSON
+Row 15: Development Environment | Android Studio Koala / Ladybug Feature Drop with Gradle 8.9
+
+=== TABLE 9 (8 rows, 3 cols) ===
+Row 0: Component Group | Primary Classes & DAOs | Architectural Responsibility
+Row 1: Storage & Ingestion | LocalStorageScanner, IndexingWorker, TextExtractor | Discovering local documents, parsing digital text, and queueing jobs
+Row 2: Vision & OCR | OcrIndexingWorker, MultiResolutionScaler, ML Kit Recognizer | Downscaling images to 2048px, extracting text blocks & bounding boxes
+Row 3: Structured Extraction | FieldExtractionWorker, DocumentFieldDao, SensitiveDataScrubber | Deterministic regex extraction of ID numbers, amounts, dates & PII masking
+Row 4: Database & Indexing | DocSphereDatabase, DocumentDao, ChunkDao, ChunkFtsEntity | Room SQLite schema, FTS4 virtual tables, and BM25 relevance ranking
+Row 5: AI Routing & Inference | AiRouter, DocumentReasoningEngine, InferenceCoordinator | Dual-engine routing, prompt token budgeting, and Mutex inference locking
+Row 6: Model Management | ModelDownloadManager, OfflineModelManager, LlmModel | Downloading, SHA-256 verifying, and lifecycle loading of Gemma 2B INT4
+Row 7: Presentation & Cloud Sync | HomeScreen, ChatScreen, FilesScreen, DriveRepository | Jetpack Compose UI, Material 3 theming, and Google Drive OAuth 2.0 PKCE sync
+
+=== TABLE 10 (1 rows, 1 cols) ===
+Row 0: [ SPACE RESERVED FOR FIGURE ] Insert the Home Screen and Document Dashboard screenshot of DocSphere here Insert the login / GitHub OAuth screenshot here
+
+=== TABLE 11 (1 rows, 1 cols) ===
+Row 0: [ SPACE RESERVED FOR FIGURE ] Insert the Multi-Resolution Document Scanner and OCR Progress screenshot here Insert the repositories screen screenshot here
+
+=== TABLE 12 (8 rows, 3 cols) ===
+Row 0: Retrieval Signal | Weight | Algorithmic Evaluation Method
+Row 1: BM25 Lexical Score | 0.35 | SQLite FTS4 matchinfo term frequency and inverse document frequency
+Row 2: Field Keyword Overlap | 0.20 | Direct match between user query tokens and extracted structured fields
+Row 3: Title & Filename Match | 0.15 | Exact or fuzzy match against document file title and extension
+Row 4: Contextual Proximity | 0.10 | Cluster proximity of multiple matching search tokens within the chunk
+Row 5: Document Recency | 0.10 | Recency bonus calculated from document modification timestamp
+Row 6: Category Alignment | 0.10 | Semantic alignment with inferred document classification category
+Row 7: Total Normalized Weight | 1.00 | Composite relevance score used to rank and prune retrieval candidates
+
+=== TABLE 13 (1 rows, 1 cols) ===
+Row 0: [ SPACE RESERVED FOR FIGURE ] Insert the Structured Field Extraction and Entity Recognition screenshot here Insert the issue detail / classification screenshot here
+
+=== TABLE 14 (5 rows, 4 cols) ===
+Row 0: Routing Mode | Selection Criteria | Retrieval & Sanitization | Reasoning Engine Executed
+Row 1: LOCAL_OFFLINE | Default mode, offline status, or sensitive identity queries | Local FTS4 BM25 chunks, zero cloud transmission | On-device Gemma 2B INT4 via MediaPipe
+Row 2: FIELD_LOOKUP | Direct queries for specific ID numbers, dates, or amounts | Deterministic DocumentFieldDao lookup | Zero-model deterministic regex engine
+Row 3: HYBRID_SCRUBBED | Complex cross-document queries with user consent | FTS4 chunks sanitized by SensitiveDataScrubber | Cloud Google Gemini 1.5 Flash / Pro
+Row 4: CLOUD_SYNTHESIS | Extensive multi-page synthesis, user explicitly requested | Cloud context transmission with user authorization | Full Google Gemini 1.5 Pro model
+
+=== TABLE 15 (1 rows, 1 cols) ===
+Row 0: [ SPACE RESERVED FOR FIGURE ] Insert the Adaptive Dual-Engine Routing and AI Model Selection screenshot here Insert the screenshot showing the route and the root-cause / resolution result here
+
+=== TABLE 16 (8 rows, 3 cols) ===
+Row 0: Budget Component | Token Allocation | Character Limit & Truncation Rule
+Row 1: System Directive Prompt | 50 tokens | ~200 characters, immutable system instruction prompt
+Row 2: Document Metadata Header | 30 tokens | ~120 characters, document title, date, and category
+Row 3: Retrieved Context Chunks | 270 tokens | ~1080 characters, top-ranked BM25 chunks, dynamically truncated
+Row 4: User Query String | 50 tokens | ~200 characters, sanitized user question
+Row 5: Generation Headroom | 50 tokens | ~200 characters, reserved buffer for initial response tokens
+Row 6: Total Input Budget Cap | 450 tokens | ~1800 characters maximum hard budget limit
+Row 7: Max Context Envelope | 2048 tokens | Hardware-safe context limit of on-device Gemma 2B INT4
+
+=== TABLE 17 (5 rows, 3 cols) ===
+Row 0: Security State | Privacy Guarantee | Operational Mechanism
+Row 1: ZERO_CLOUD_LEAKAGE | Absolute local privacy | 100% on-device OCR, FTS4 chunking, and Gemma 2B inference
+Row 2: PII_SCRUBBED_CLOUD | Controlled cloud privacy | SensitiveDataScrubber masks Aadhaar, PAN, SSN before cloud upload
+Row 3: OFFLINE_AUTONOMOUS | Complete network resilience | System operates with zero internet connectivity; cloud calls disabled
+Row 4: ENCRYPTED_BACKUP | Cloud storage security | Drive backups encrypted with AES-256 before OAuth 2.0 PKCE sync
+
+=== TABLE 18 (1 rows, 1 cols) ===
+Row 0: [ SPACE RESERVED FOR FIGURE ] Insert the Interactive Document Q&A and Grounded Chat Screen screenshot here Insert the Confidence & Evidence tab screenshot here
+
+=== TABLE 19 (1 rows, 1 cols) ===
+Row 0: [ SPACE RESERVED FOR FIGURE ] Insert the Encrypted Google Drive Synchronization and Backup Screen screenshot here Insert the Fix & PR Gate tab screenshot here
+
+=== TABLE 20 (1 rows, 1 cols) ===
+Row 0: [ SPACE RESERVED FOR FIGURE ] Insert the Settings and On-Device Model Management Screen screenshot here Insert the GitHub pull-request screenshot here
+

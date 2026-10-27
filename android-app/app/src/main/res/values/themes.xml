@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.PhonePerfect" parent="android:Theme.Material.NoActionBar">
+        <!-- Transparent system bars – enableEdgeToEdge() draws behind them,
+             the FrameLayout container fills the gaps with #090D16 via setPadding. -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <!-- White icons on dark background -->
+        <item name="android:windowLightStatusBar">false</item>
+        <!-- Dark background visible during launch / before WebView loads -->
+        <item name="android:windowBackground">#090D16</item>
+    </style>
+</resources>
